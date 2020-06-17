@@ -85,6 +85,11 @@ const val CARD_USER: String="user"
 /**
  *
  */
+const val CARD_RECIPIENT: String="recipient"
+
+/**
+ *
+ */
 const val CARD_EVENT: String="event"
 
 /**

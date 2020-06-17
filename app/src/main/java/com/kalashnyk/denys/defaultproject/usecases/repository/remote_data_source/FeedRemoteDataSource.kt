@@ -32,5 +32,5 @@ class FeedRemoteDataSourceImpl(private val serverCommunicator: ServerCommunicato
 
 
     override fun fetchNext(screenType: String, lastItemId: String): Single<Response<List<ThemeEntity>>> =
-        serverCommunicator.fetchThemes(screenType=screenType, lastItemId=lastItemId)
+serverCommunicator.fetchThemes(screenType=screenType, lastItemId=lastItemId)
 }

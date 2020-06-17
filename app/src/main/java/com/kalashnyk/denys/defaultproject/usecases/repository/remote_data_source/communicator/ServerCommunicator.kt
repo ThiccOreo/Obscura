@@ -1,6 +1,7 @@
 package com.kalashnyk.denys.defaultproject.usecases.repository.remote_data_source.communicator
 
 import android.util.Log
+import com.kalashnyk.denys.defaultproject.usecases.repository.data_source.database.entity.RecipientEntity
 import com.kalashnyk.denys.defaultproject.usecases.repository.data_source.database.entity.ThemeEntity
 import com.kalashnyk.denys.defaultproject.usecases.repository.data_source.database.entity.UserEntity
 import com.kalashnyk.denys.defaultproject.usecases.repository.remote_data_source.pojo.UserResponse
@@ -29,6 +30,11 @@ class ServerCommunicator(private val mService: ApiService) {
             .doOnError { t: Throwable -> Log.d("ServerCommunicator", t.message) }
     }
 
+    fun fetchRecipients(screenType: String, lastItemId: String?): Single<Response<List<RecipientEntity>>> {
+        return mService.fetchRecipients(screenType, lastItemId)
+            .doOnError { t: Throwable -> Log.d("ServerCommunicator", t.message) }
+    }
+
     fun getAllUsers(): Single<Response<UserResponse>> {
         return mService.getUsers()
             .compose(singleTransformer())
@@ -38,6 +44,7 @@ class ServerCommunicator(private val mService: ApiService) {
     fun getUser(id: Int): Single<UserEntity> {
         return mService.getUserById(id).compose(singleTransformer())
     }
+
 
     private fun <T> singleTransformer(
         subscribeOn: Scheduler,

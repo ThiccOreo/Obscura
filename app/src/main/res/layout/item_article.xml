@@ -26,7 +26,7 @@
                 android:layout_marginTop="@dimen/indentation_20"
                 android:layout_marginEnd="@dimen/indentation_20"
                 android:fontFamily="sans-serif-medium"
-                android:text="@string/help_me_choose_a_photo_camera"
+                android:text="@string/article_text"
                 android:textColor="@color/grey_brown"
                 android:textSize="@dimen/txt_size_18"
                 android:textStyle="normal"

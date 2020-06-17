@@ -1,5 +1,6 @@
 package com.kalashnyk.denys.defaultproject.utils
 
+import com.kalashnyk.denys.defaultproject.usecases.repository.data_source.database.entity.RecipientEntity
 import com.kalashnyk.denys.defaultproject.usecases.repository.data_source.database.entity.ThemeEntity
 import com.kalashnyk.denys.defaultproject.usecases.repository.data_source.database.entity.UserEntity
 
@@ -117,6 +118,16 @@ object MocUtil {
         list.add(entity24)
         val entity25=UserEntity(25, ("$CARD_USER name 25"), ("$CARD_USER surname 25"), ("$CARD_USER fathername 25"))
         list.add(entity25)
+
+        return list
+    }
+
+    fun mocListRecipients(): List<RecipientEntity> {
+        val list=ArrayList<RecipientEntity>()
+        val entity1=RecipientEntity(1, ("$CARD_RECIPIENT name 1"), ("$CARD_RECIPIENT surname 1"), ("$CARD_RECIPIENT fathername 1"))
+        list.add(entity1)
+        val entity2=RecipientEntity(2, ("$CARD_RECIPIENT name 2"), ("$CARD_RECIPIENT surname 2"), ("$CARD_RECIPIENT fathername 2"))
+        list.add(entity2)
 
         return list
     }

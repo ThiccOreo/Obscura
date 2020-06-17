@@ -34,9 +34,10 @@ enum class TabPages(
      * for tab articles
      */
     TAB_ARTICLES(R.string.tab_articles);
-
     /**
      * for show message body
      */
     fun toString(context: Context):String = context.getString(resource)
+
+
 }

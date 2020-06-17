@@ -134,4 +134,5 @@
     <string name="title_geo_current">current location</string>
     <string name="location_chosen_text">chosen location</string>
     <string name="location_chosen_err">chosen location error</string>
+    <string name="tab_recipients">RECIPIENTS</string>
 </resources>
